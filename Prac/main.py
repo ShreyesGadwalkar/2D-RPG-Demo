@@ -6,7 +6,7 @@ from level import Level
 class Main:
     def __init__(self):
         self.screen = pg.display.set_mode((WIDTH, HEIGHT))
-        pg.display.set_caption("Fakèmon")
+        pg.display.set_caption("Demo")
         self.clock = pg.time.Clock()
         self.level = Level()
 
