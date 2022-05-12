@@ -11,6 +11,7 @@ class Main:
         self.level = Level()
 
     def run(self):
+
         while True:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
