@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./Zelda/8 - UI/code"
+        
+    ]
+}
