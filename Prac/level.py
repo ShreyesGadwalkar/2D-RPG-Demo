@@ -4,6 +4,7 @@ from map import *
 from tile import Tile
 from player import *
 from random import choice
+from debug import *
 
 
 class Level:
@@ -51,6 +52,7 @@ class Level:
     def run(self):
         self.visible_sprites.draw(self.player)
         self.visible_sprites.update()
+        debug(self.player.status)
 
 class YSortCameraGroup(pygame.sprite.Group):
     def __init__(self):
@@ -73,7 +75,6 @@ class YSortCameraGroup(pygame.sprite.Group):
         self.display_surface.blit(self.floor_surface, floor_offset_pos)
 
         #drawing sprites
-        # for sprite in self.sprites():
         for sprite in sorted(self.sprites(), key=lambda sprite: sprite.rect.centery):
             offset_position = sprite.rect.topleft - self.offset
             self.display_surface.blit(sprite.image, offset_position)
